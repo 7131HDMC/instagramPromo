@@ -1,0 +1,84 @@
+<!-- templates/registration/login.html -->
+<style type="text/css">
+  .container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-image: url("https://blaze.com/apple-touch-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+  .limiter{
+    width: 100%;
+    margin: 0 auto;
+  }
+</style>
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% comment %} {% block content %}
+<!-- templates/registration/login.html -->
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+
+{% endblock %} {% endcomment %}
+
+{% block content %}
+<div class="limiter">
+  <div class="container-login100" >
+    {% comment %} <img src="/> {% endcomment %}
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Login</div>
+                    <div class="panel-body">
+                        {% if error_message %}
+                            <p class="bg-danger p-d ml-b">{{ error_message }}</p>
+                        {% endif %}
+                        <div class="form-group clearfix">
+                            <label for="username" class="col-md-4 control-label text-right">Username:</label>
+                            <div class="col-md-6">
+                                <input name="username" value="" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label for="password" class="col-md-4 control-label text-right">Password:</label>
+                            <div class="col-md-6">
+                                <input name="password" type="password" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-md-offset-4" style="top: -15px; text-size: 9px;">
+                          <a href="/mymodule/reset"> Forgot password</a>
+                        </div>
+                        <div class="col-md-6 col-md-offset-4">
+                            <input name="login" type="submit" value="Login" class="btn btn-success" /> &nbsp;
+                            <a href="/mymodule/register">Register</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

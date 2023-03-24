@@ -1,0 +1,20 @@
+1679531669953	geckodriver	INFO	Listening on 127.0.0.1:51881
+1679531670645	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "42523" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileBzcOPJ"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1679531671239	Marionette	INFO	Marionette enabled
+1679531671244	Marionette	INFO	Listening on port 35981
+Read port: 35981
+WebDriver BiDi listening on ws://127.0.0.1:42523
+1679531671407	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt (t=1.4012) [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileBzcOPJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:42523/devtools/browser/c10f9cad-3f35-4604-8f7e-0e1b6afc6a0c
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3inwA4/yZ/l/pt_BR/r8CiHUChGYU.js?_nc_x=Ij3Wp8lg5Kz, line 31: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.instagram.com."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Crash Annotation GraphicsCriticalError: |[C0][GFX1-]: Receive IPC close with reason=AbnormalShutdown (t=35.2033) 
